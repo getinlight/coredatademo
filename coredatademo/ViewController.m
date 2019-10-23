@@ -11,6 +11,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic, strong) NSManagedObjectContext *context;
+
 @end
 
 @implementation ViewController
@@ -18,13 +20,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+//    [self createSqlite];
+    
 }
 
+/// iOS10之前的方法
 - (void)createSqlite {
     //1.创建模型对象
     
     //获取模型路径
     NSURL *modelUrl = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
+    NSLog(@"modelUrl %@", [NSBundle mainBundle].bundlePath);
     //根据模型文件创建模型对象
     NSManagedObjectModel *model = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelUrl];
     
@@ -48,7 +54,11 @@
     }
     
     //3.创建上下文 保存数据 对数据库进行操作
+    NSManagedObjectContext *context = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
     
+    //关联持久化助理
+    context.persistentStoreCoordinator = store;
+    _context = context;
     
 }
 
