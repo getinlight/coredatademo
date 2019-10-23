@@ -8,10 +8,13 @@
 
 #import "ViewController.h"
 #import <CoreData/CoreData.h>
+#import "Student+CoreDataClass.h"
+#import "Student+CoreDataProperties.h"
 
 @interface ViewController ()
 
 @property (nonatomic, strong) NSManagedObjectContext *context;
+@property (nonatomic, strong) NSPersistentContainer *persistentContainer;
 
 @end
 
@@ -21,7 +24,7 @@
     [super viewDidLoad];
     
 //    [self createSqlite];
-    
+    [self create];
 }
 
 /// iOS10之前的方法
@@ -59,6 +62,43 @@
     //关联持久化助理
     context.persistentStoreCoordinator = store;
     _context = context;
+    
+}
+
+- (NSPersistentContainer *)persistentContainer {
+    @synchronized (self) {
+        if (_persistentContainer == nil) {
+            _persistentContainer = [[NSPersistentContainer alloc] initWithName:@"Model"];
+            [_persistentContainer loadPersistentStoresWithCompletionHandler:^(NSPersistentStoreDescription * storeDescription, NSError *error) {
+                if (error != nil) {
+                    NSLog(@"Unresolved error %@: %@", error, error.userInfo);
+                    abort();
+                }
+            }];
+        }
+    }
+    
+    return _persistentContainer;
+}
+
+- (void)create {
+    //1.根据Entity名称和NSManagedObjectContext获取一个新的继承于NSManagedObject的子类Student
+    Student *student = [NSEntityDescription insertNewObjectForEntityForName:@"Student" inManagedObjectContext:self.persistentContainer.viewContext];
+    
+    //2.根据表Student中的键值，给NSManagedObject对象赋值
+    student.name = [NSString stringWithFormat:@"Mr-%d",arc4random()%100];
+    student.age = arc4random()%20;
+    student.sex = arc4random()%2 == 0 ?  @"美女" : @"帅哥" ;
+    student.height = arc4random()%180;
+    student.number = arc4random()%100;
+    
+    //3.保存插入的数据
+    NSError *error = nil;
+    if ([_context save:&error]) {
+        NSLog(@"数据插入到数据库成功");
+    }else{
+        NSLog(@"%@", [NSString stringWithFormat:@"数据插入到数据库失败, %@",error.userInfo]);
+    }
     
 }
 
