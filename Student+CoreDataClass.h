@@ -2,7 +2,7 @@
 //  Student+CoreDataClass.h
 //  coredatademo
 //
-//  Created by z on 2019/10/23.
+//  Created by z on 2019/10/24.
 //  Copyright © 2019 z. All rights reserved.
 //
 //

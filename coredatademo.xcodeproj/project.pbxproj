@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19CCF8362361876C0035F97A /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CCF8342361876C0035F97A /* Student+CoreDataClass.m */; };
+		19CCF8372361876C0035F97A /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 19CCF8352361876C0035F97A /* Student+CoreDataProperties.m */; };
 		19E1B43223602D7600932B77 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1B43123602D7600932B77 /* AppDelegate.m */; };
 		19E1B43523602D7600932B77 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1B43423602D7600932B77 /* SceneDelegate.m */; };
 		19E1B43823602D7600932B77 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1B43723602D7600932B77 /* ViewController.m */; };
@@ -15,11 +17,14 @@
 		19E1B44023602D7700932B77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19E1B43E23602D7700932B77 /* LaunchScreen.storyboard */; };
 		19E1B44323602D7700932B77 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1B44223602D7700932B77 /* main.m */; };
 		19E1B44B23602D9800932B77 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 19E1B44923602D9800932B77 /* Model.xcdatamodeld */; };
-		19E1B45023602E2000932B77 /* Student+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1B44E23602E2000932B77 /* Student+CoreDataClass.m */; };
-		19E1B45123602E2000932B77 /* Student+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 19E1B44F23602E2000932B77 /* Student+CoreDataProperties.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19CCF82B23617D8C0035F97A /* Model 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "Model 2.xcdatamodel"; sourceTree = "<group>"; };
+		19CCF8322361876C0035F97A /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataProperties.h"; sourceTree = "<group>"; };
+		19CCF8332361876C0035F97A /* Student+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataClass.h"; sourceTree = "<group>"; };
+		19CCF8342361876C0035F97A /* Student+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataClass.m"; sourceTree = "<group>"; };
+		19CCF8352361876C0035F97A /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataProperties.m"; sourceTree = "<group>"; };
 		19E1B42D23602D7600932B77 /* coredatademo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = coredatademo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19E1B43023602D7600932B77 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		19E1B43123602D7600932B77 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -33,10 +38,6 @@
 		19E1B44123602D7700932B77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		19E1B44223602D7700932B77 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		19E1B44A23602D9800932B77 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		19E1B44C23602E2000932B77 /* Student+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataProperties.h"; sourceTree = "<group>"; };
-		19E1B44D23602E2000932B77 /* Student+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Student+CoreDataClass.h"; sourceTree = "<group>"; };
-		19E1B44E23602E2000932B77 /* Student+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataClass.m"; sourceTree = "<group>"; };
-		19E1B44F23602E2000932B77 /* Student+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "Student+CoreDataProperties.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,10 +54,10 @@
 		19E1B42423602D7600932B77 = {
 			isa = PBXGroup;
 			children = (
-				19E1B44D23602E2000932B77 /* Student+CoreDataClass.h */,
-				19E1B44E23602E2000932B77 /* Student+CoreDataClass.m */,
-				19E1B44C23602E2000932B77 /* Student+CoreDataProperties.h */,
-				19E1B44F23602E2000932B77 /* Student+CoreDataProperties.m */,
+				19CCF8322361876C0035F97A /* Student+CoreDataProperties.h */,
+				19CCF8332361876C0035F97A /* Student+CoreDataClass.h */,
+				19CCF8342361876C0035F97A /* Student+CoreDataClass.m */,
+				19CCF8352361876C0035F97A /* Student+CoreDataProperties.m */,
 				19E1B42F23602D7600932B77 /* coredatademo */,
 				19E1B42E23602D7600932B77 /* Products */,
 			);
@@ -160,11 +161,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				19E1B43823602D7600932B77 /* ViewController.m in Sources */,
-				19E1B45023602E2000932B77 /* Student+CoreDataClass.m in Sources */,
+				19CCF8362361876C0035F97A /* Student+CoreDataClass.m in Sources */,
 				19E1B43223602D7600932B77 /* AppDelegate.m in Sources */,
 				19E1B44B23602D9800932B77 /* Model.xcdatamodeld in Sources */,
 				19E1B44323602D7700932B77 /* main.m in Sources */,
-				19E1B45123602E2000932B77 /* Student+CoreDataProperties.m in Sources */,
+				19CCF8372361876C0035F97A /* Student+CoreDataProperties.m in Sources */,
 				19E1B43523602D7600932B77 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,9 +361,10 @@
 		19E1B44923602D9800932B77 /* Model.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
+				19CCF82B23617D8C0035F97A /* Model 2.xcdatamodel */,
 				19E1B44A23602D9800932B77 /* Model.xcdatamodel */,
 			);
-			currentVersion = 19E1B44A23602D9800932B77 /* Model.xcdatamodel */;
+			currentVersion = 19CCF82B23617D8C0035F97A /* Model 2.xcdatamodel */;
 			path = Model.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

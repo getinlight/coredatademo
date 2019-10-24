@@ -2,7 +2,7 @@
 //  Student+CoreDataProperties.h
 //  coredatademo
 //
-//  Created by z on 2019/10/23.
+//  Created by z on 2019/10/24.
 //  Copyright © 2019 z. All rights reserved.
 //
 //
@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nullable, nonatomic, copy) NSString *name;
 @property (nonatomic) int16_t number;
 @property (nullable, nonatomic, copy) NSString *sex;
+@property (nonatomic) int16_t weight;
 
 @end
 

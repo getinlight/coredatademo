@@ -82,6 +82,9 @@
         }
     }
     
+//    _persistentContainer.persistentStoreDescriptions[0].shouldMigrateStoreAutomatically = YES;
+//    _persistentContainer.persistentStoreDescriptions[0].shouldInferMappingModelAutomatically = NO;
+    
     return _persistentContainer;
 }
 
@@ -96,6 +99,7 @@
     student.sex = arc4random()%2 == 0 ?  @"美女" : @"帅哥" ;
     student.height = arc4random()%180;
     student.number = arc4random()%100;
+    student.weight = arc4random()%100;
     
     //3.保存插入的数据
     NSError *error = nil;
